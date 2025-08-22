@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio! I'm Yeasin Arafat Nayem Bhuiyan, a passionate Frontend Developer specializing in creating modern, responsive, and visually appealing web applications using React.js, Tailwind CSS, and Vite.
 
-🔗 **Live Demo:** [Portfolio || Nayem]([https://yanayem.netlify.app/](https://portfolio-react-tailwind-navy.vercel.app/))
+🔗 **Live Demo:** [Portfolio || Nayem]([https://yanayem.netlify.app/](https://portfolio-react-tailwind-navy.vercel.app/)
 
 ---
 
