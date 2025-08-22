@@ -43,7 +43,7 @@ const AboutMe = () => {
                 </button>
 
                 <a
-                  href="https://1drv.ms/b/c/4b83bb33d9e6a435/EfdPaY6d9DNNqVvgwFWOXzEBC9qSE_9qOoem90fvtXJp5Q?e=sqTJ1U"
+                  href="https://1drv.ms/b/c/4b83bb33d9e6a435/EfdPaY6d9DNNqVvgwFWOXzEBC9qSE_9qOoem90fvtXJp5Q?e=vMDnzH"
                   className="px-6 py-2 rounded-full border border-primary text-primary text-center hover:text-fifth transition-colors duration-200"
                 >
                   Download CV
