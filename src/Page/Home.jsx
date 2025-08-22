@@ -6,7 +6,7 @@ import HeroSection from "../component/HeroSection";
 import AboutMe from "../component/AboutMe";
 import SkillSection from "../component/SkillSection";
 import ProjectSection from "../component/ProjectSection";
-import ServiceSection from "../component/ServiceSection"; // ✅ Capitalized
+import ServiceSection from "../component/ServiceSection";
 import ContactSection from "../component/ContactSection";
 import Footer from "../component/Footer";
 import ScrollToTop from "../component/ScrollToTop";
@@ -26,7 +26,7 @@ const Home = () => {
       <AboutMe />
       <SkillSection />
       <ProjectSection />
-      <ServiceSection />   {/* ✅ Capitalized */}
+      <ServiceSection />
       <ContactSection />
       <Footer />
 
