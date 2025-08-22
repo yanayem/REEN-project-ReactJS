@@ -1,15 +1,15 @@
 import React from "react";
-import ThemeToggle from "../component/ThemeToggle";
-import NavBar from "../component/NavBar";
-import StarBackground from "../component/StarBackground";
-import HeroSection from "../component/HeroSection"; 
-import AboutMe from "../component/AboutMe";
-import SkillSection from "../component/SkillSection";
-import ProjectSection from "../component/ProjectSection";
-import ServiceSection from "../component/ServiceSection";
-import ContactSection from "../component/ContactSection";
-import Footer from "../component/Footer";
-import ScrollToTop from "../component/ScrollToTop";
+import ThemeToggle from "../Component/ThemeToggle";
+import NavBar from "../Component/NavBar";
+import StarBackground from "../Component/StarBackground";
+import HeroSection from "../Component/HeroSection"; 
+import AboutMe from "../Component/AboutMe";
+import SkillSection from "../Component/SkillSection";
+import ProjectSection from "../Component/ProjectSection";
+import ServiceSection from "../Component/ServiceSection";
+import ContactSection from "../Component/ContactSection";
+import Footer from "../Component/Footer";
+import ScrollToTop from "../Component/ScrollToTop";
 
 const Home = () => {
   return (
