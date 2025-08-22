@@ -2,11 +2,11 @@ import React from "react";
 import ThemeToggle from "../component/ThemeToggle";
 import NavBar from "../component/NavBar";
 import StarBackground from "../component/StarBackground";
-import HeroSection from "../component/HeroSection";
+import HeroSection from "../component/HeroSection"; 
 import AboutMe from "../component/AboutMe";
 import SkillSection from "../component/SkillSection";
 import ProjectSection from "../component/ProjectSection";
-import ServiceSection from '../component/ServiceSection'
+import ServiceSection from "../component/ServiceSection";
 import ContactSection from "../component/ContactSection";
 import Footer from "../component/Footer";
 import ScrollToTop from "../component/ScrollToTop";
@@ -16,8 +16,10 @@ const Home = () => {
     <div className="relative min-h-screen bg-background text-foreground">
       {/* Theme Toggle */}
       <ThemeToggle />
+
       {/* Background Effects */}
       <StarBackground />
+
       {/* Navigation Bar */}
       <NavBar />
 
