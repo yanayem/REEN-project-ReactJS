@@ -30,7 +30,10 @@ const SkillSection = () => {
       : skills.filter((skill) => skill.category.includes(activeCategory));
 
   return (
-    <section id="skills" className="py-24 px-8 relative bg-secondary/10 dark:bg-secondary/30">
+    <section
+      id="skills"
+      className="py-24 px-8 relative bg-secondary/10 dark:bg-secondary/30"
+    >
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           My <span className="text-primary">Skills</span>
@@ -87,7 +90,9 @@ const SkillSection = () => {
               </div>
 
               <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                <span className="text-sm text-muted-foreground">
+                  {skill.level}%
+                </span>
               </div>
             </motion.div>
           ))}

@@ -29,8 +29,7 @@ const ThemeToggle = () => {
   };
 
   return (
-    <button onClick={toggleTheme}
-    className="fixed z-50 p-2 top-3 right-4">
+    <button onClick={toggleTheme} className="fixed z-50 p-2 top-3 right-4">
       {isDarkMode ? (
         <Sun className="h-6 text-yellow-300 " />
       ) : (

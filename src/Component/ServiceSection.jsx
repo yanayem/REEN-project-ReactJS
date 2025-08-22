@@ -48,7 +48,10 @@ const ServiceSection = () => {
   const [billing, setBilling] = useState("monthly"); // monthly or yearly
 
   return (
-    <section id="service" className="service-area py-12 bg-gray-50 dark:bg-gray-900">
+    <section
+      id="service"
+      className="service-area py-12 bg-gray-50 dark:bg-gray-900"
+    >
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 text-center">
           Choose Plan That’s Right For You

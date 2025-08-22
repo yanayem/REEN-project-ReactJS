@@ -17,7 +17,9 @@ const StarBackground = () => {
   }, []);
 
   const generateStars = () => {
-    const numberOfStars = Math.floor((window.innerWidth * window.innerHeight) / 3000);
+    const numberOfStars = Math.floor(
+      (window.innerWidth * window.innerHeight) / 3000
+    );
     const newStars = [];
 
     for (let i = 0; i < numberOfStars; i++) {
@@ -35,7 +37,9 @@ const StarBackground = () => {
   };
 
   const generateMeteors = () => {
-    const numberOfMeteors = Math.floor((window.innerWidth * window.innerHeight) / 50000);
+    const numberOfMeteors = Math.floor(
+      (window.innerWidth * window.innerHeight) / 50000
+    );
     const newMeteors = [];
 
     for (let i = 0; i < numberOfMeteors; i++) {
@@ -75,7 +79,7 @@ const StarBackground = () => {
           className="meteor"
           style={{
             width: meteor.size * 20 + "px",
-            height: meteor.size  + "px",
+            height: meteor.size + "px",
             top: meteor.y + "%",
             left: meteor.x + "%",
             opacity: meteor.opacity,

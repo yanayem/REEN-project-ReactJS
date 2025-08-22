@@ -62,10 +62,7 @@ const ContactSection = () => {
       name: "Twitter",
       url: "#",
       icon: (
-        <Twitter
-          size={24}
-          className="transition-colors hover:text-[#1DA1F2]"
-        />
+        <Twitter size={24} className="transition-colors hover:text-[#1DA1F2]" />
       ),
     },
     {
@@ -82,10 +79,7 @@ const ContactSection = () => {
       name: "Github",
       url: "https://github.com/yanayem",
       icon: (
-        <Github
-          size={24}
-          className="transition-colors hover:text-gray-600"
-        />
+        <Github size={24} className="transition-colors hover:text-gray-600" />
       ),
     },
   ];

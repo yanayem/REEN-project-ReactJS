@@ -31,16 +31,16 @@ const AboutMe = () => {
               <h3 className="text-lg font-semibold mb-4 ">Get in Touch</h3>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
-  onClick={() => {
-    const contact = document.getElementById("contact");
-    if (contact) {
-      contact.scrollIntoView({ behavior: "smooth" });
-    }
-  }}
-  className="rounded-full px-6 py-2 bg-primary hover:bg-fifth transition-all duration-200 transform  cursor-pointer"
->
-  Get In Touch
-</button>
+                  onClick={() => {
+                    const contact = document.getElementById("contact");
+                    if (contact) {
+                      contact.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="rounded-full px-6 py-2 bg-primary hover:bg-fifth transition-all duration-200 transform  cursor-pointer"
+                >
+                  Get In Touch
+                </button>
 
                 <a
                   href="https://1drv.ms/b/c/4b83bb33d9e6a435/EfdPaY6d9DNNqVvgwFWOXzEBC9qSE_9qOoem90fvtXJp5Q?e=sqTJ1U"

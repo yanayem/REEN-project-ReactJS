@@ -19,8 +19,7 @@ const HeroSection = () => {
         {/* Heading */}
         <div className="space-y-6">
           <h1 className="inline-block text-4xl font-bold tracking-tight opacity-0 md:text-6xl animate-fade-in">
-            Hi, I'm{" "}
-            <span className="text-primary">Yeasin</span>{" "}
+            Hi, I'm <span className="text-primary">Yeasin</span>{" "}
             <span className="text-secondary">Arafat Nayem</span>{" "}
             <span className="text-primary">Bhuiyan</span>
           </h1>
