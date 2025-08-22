@@ -128,7 +128,7 @@ const ProjectSection = () => {
             href="https://github.com/yanayem"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-semibold transition-colors text-primary hover:text-primary/80"
+            className="inline-flex items-center gap-2 font-semibold transition-colors text-primary hover:text-fifth"
           >
             Check my GitHub <ArrowRight size={16} />
           </a>

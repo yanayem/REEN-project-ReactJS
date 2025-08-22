@@ -1,11 +1,12 @@
-import React from "react";;
-import ThemeToggle from "../component/ThemeToggle"; 
-import Navbar from "../component/NavBar";
-import StarBackground from "../component/StarBackground"; 
-import HeroSection from "../component/HeroSection"; 
+import React from "react";
+import ThemeToggle from "../component/ThemeToggle";
+import NavBar from "../component/NavBar";
+import StarBackground from "../component/StarBackground";
+import HeroSection from "../component/HeroSection";
 import AboutMe from "../component/AboutMe";
 import SkillSection from "../component/SkillSection";
 import ProjectSection from "../component/ProjectSection";
+import ServiceSection from "../component/ServiceSection"; // ✅ Capitalized
 import ContactSection from "../component/ContactSection";
 import Footer from "../component/Footer";
 import ScrollToTop from "../component/ScrollToTop";
@@ -13,25 +14,24 @@ import ScrollToTop from "../component/ScrollToTop";
 const Home = () => {
   return (
     <div className="relative min-h-screen bg-background text-foreground">
-    
-    {/* Theme Toggle */}
+      {/* Theme Toggle */}
       <ThemeToggle />
       {/* Background Effects */}
       <StarBackground />
       {/* Navigation Bar */}
-      <Navbar />
+      <NavBar />
 
-        {/* Main Sections */}
+      {/* Main Sections */}
       <HeroSection />
-        <AboutMe />
-         <SkillSection />
-         <ProjectSection />
+      <AboutMe />
+      <SkillSection />
+      <ProjectSection />
+      <ServiceSection />   {/* ✅ Capitalized */}
       <ContactSection />
       <Footer />
 
       {/* Scroll to Top Button */}
       <ScrollToTop />
-
     </div>
   );
 };

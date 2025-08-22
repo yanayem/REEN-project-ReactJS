@@ -39,7 +39,7 @@ const HeroSection = () => {
         <div className="pt-4 opacity-0 animate-fade-in animate-delay-1000">
           <a
             href="#projects"
-            className="inline-block px-6 py-3 transition-colors duration-300 ease-in-out rounded-md shadow-md bg-primary text-primary-foreground hover:bg-primary-hover"
+            className="inline-block px-6 py-3 transition-colors duration-300 ease-in-out rounded-md shadow-md bg-primary text-primary-foreground hover:bg-fifth"
           >
             View My Projects
           </a>
@@ -52,7 +52,7 @@ const HeroSection = () => {
           aria-label="Scroll to footer"
         >
           <span className="text-sm md:text-md">Scroll</span>
-          <ArrowDown className="w-6 h-5 text-primary" />
+          <ArrowDown className="w-6 h-5 text-primary hover:text-fifth" />
         </button>
       </div>
     </section>

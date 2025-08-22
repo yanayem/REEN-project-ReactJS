@@ -30,7 +30,7 @@ const SkillSection = () => {
       : skills.filter((skill) => skill.category.includes(activeCategory));
 
   return (
-    <section id="skills" className="py-24 px-8 relative bg-secondary/30">
+    <section id="skills" className="py-24 px-8 relative bg-secondary/10 dark:bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           My <span className="text-primary">Skills</span>
@@ -43,10 +43,10 @@ const SkillSection = () => {
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                "px-5 py-2 rounded-full transition-all duration-300 transform hover:scale-105 capitalize",
                 activeCategory === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-foreground hover:bg-secondary"
+                  ? "bg-primary text-primary-foreground shadow-md"
+                  : "bg-secondary/70 dark:bg-secondary/50 text-foreground dark:text-muted-foreground hover:bg-secondary/80 dark:hover:bg-secondary/70"
               )}
             >
               {category}
@@ -56,7 +56,7 @@ const SkillSection = () => {
 
         {/* Skills Grid */}
         <motion.div
-          key={activeCategory} // re-animate on category change
+          key={activeCategory}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -65,7 +65,7 @@ const SkillSection = () => {
           {filteredSkills.map((skill, key) => (
             <motion.div
               key={skill.name}
-              className="bg-card p-6 rounded-lg shadow-xs hover:shadow-md transition-shadow"
+              className="bg-card dark:bg-card-dark p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -76,7 +76,7 @@ const SkillSection = () => {
               </div>
 
               {/* Animated Progress Bar */}
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
+              <div className="w-full bg-secondary/50 dark:bg-secondary/40 h-2 rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.level}%` }}
@@ -87,9 +87,7 @@ const SkillSection = () => {
               </div>
 
               <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
+                <span className="text-sm text-muted-foreground">{skill.level}%</span>
               </div>
             </motion.div>
           ))}

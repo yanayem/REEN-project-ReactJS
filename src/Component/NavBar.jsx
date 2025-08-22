@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { cn } from "../lib/utils"; // Utility function for class names
 import { X, Menu } from "lucide-react"; // For icons
 
-const Navbar = () => {
+const NavBar = () => {
   const [isScrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -47,12 +47,12 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden space-x-8 sm:hidden md:flex">
+        <div className="hidden space-x-8 sm:hidden md:flex ">
           {navItems.map(({ name, href }) => (
             <a
               key={name}
               href={href}
-              className="transition-colors duration-300 text-foreground text-custom"
+              className="transition-colors duration-300 text-foreground text-custom hover:font-semibold hover:text-eighth capitalize"
             >
               {name}
             </a>
@@ -72,7 +72,7 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          "fixed inset-0 bg-background/80 backdrop-blur-md z-30 flex flex-col items-center justify-center space-y-6 transition-all duration-300 md:hidden",
+          "fixed inset-0 bg-background/80 backdrop-blur-md z-30 flex flex-col items-center justify-center space-y-6 transition-all duration-300 md:hidden ",
           isMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -82,7 +82,7 @@ const Navbar = () => {
           <a
             key={name}
             href={href}
-            className="text-lg transition-colors text-foreground hover:text-primary"
+            className="text-lg transition-colors text-foreground  hover:font-semibold hover:text-eighth capitalize"
             onClick={() => setIsMenuOpen(false)}
           >
             {name}
@@ -93,4 +93,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
