@@ -7,7 +7,7 @@ import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   useEffect(() => {
-    document.title = "Portfolio";
+    document.title = "Portfolio || Nayem";
   }, []); 
 
   return (
