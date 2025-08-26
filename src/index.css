@@ -12,7 +12,7 @@
     /* Core Colors */
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
-    --primary: 208, 93%, 50%;
+    --primary: 168, 100%, 37%;
     --primary-foreground: oklch(0.985 0 0);
     --secondary: 156, 79%, 43%;
     --success: oklch(0.35 0.12 0);
@@ -26,11 +26,11 @@
 
     /* Navbar & Custom Palette */
     --NAVbg: 210 30% 98%;
-    --fourth: 160 100% 50%;
+    --fourth: 210, 27%, 25%;
     --fifth: 210 80% 60%;
     --sixth: 340 80% 60%;
     --seventh: 200 90% 55%;
-    --eighth: 150 100% 30%;
+    --eighth: 168, 100%, 37%;
   }
 
   /* ---------- Dark Mode Variables ---------- */
@@ -53,7 +53,7 @@
     --fifth: 210, 95%, 45%;
     --sixth: 340 70% 50%;
     --seventh: 200 80% 45%;
-    --eighth: 140, 100%, 40%;
+    --eighth: 168, 100%, 37%;
   }
 
   /* ---------- Global Styles ---------- */

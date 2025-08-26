@@ -1,137 +1,133 @@
-import React from "react";
-import { ExternalLink, Github, ArrowRight } from "lucide-react";
-import img1 from "../assets/img_1.png";
-import img2 from "../assets/img_2.png";
-import img3 from "../assets/img_3.png";
+import React, { useState, useEffect } from "react";
+import img_1 from "../assets/slide1.png";
+import img_2 from "../assets/slide2.png";
+import img_3 from "../assets/slide3.png";
+import img_4 from "../assets/slide4.png";
+import img_5 from "../assets/slide5.png";
+import img_6 from "../assets/slide6.png";
+import img_7 from "../assets/slide7.png";
+import img_8 from "../assets/slide8.png";
 
 const ProjectSection = () => {
-  const projects = [
-    {
-      title: "Pet Shop",
-      description:
-        "A sleek personal portfolio built with React, Vite, and Tailwind CSS. Features dark mode, animated backgrounds, and smooth scroll navigation.",
-      tags: ["React", "Vite", "Tailwind", "Dark Mode", "Animation"],
-      demoUrl: "https://petshop012.netlify.app/",
-      githubUrl: "#",
-      image: img1,
-    },
-    {
-      title: "Blackbang hacks Portfolio",
-      description:
-        "A productivity web app for managing tasks and projects. Includes drag-and-drop UI, theme toggles, and local storage persistence.",
-      tags: [
-        "React",
-        "Tailwind",
-        "LocalStorage",
-        "Drag & Drop",
-        "Theme Toggle",
-      ],
-      demoUrl: "https://blackbanghacks.netlify.app/",
-      githubUrl: "#",
-      image: img2,
-    },
-    {
-      title: "Nature Blog",
-      description:
-        "A GitHub user search tool using the GitHub API. Responsive design with light/dark mode, error handling, and animated transitions.",
-      tags: ["React", "API", "Tailwind", "Dark Mode", "Responsive"],
-      demoUrl: "https://imageinactive.netlify.app/",
-      githubUrl: "#",
-      image: img3,
-    },
+  const images = [img_1, img_2, img_3, img_4, img_5, img_6, img_7, img_8];
+
+  const [slidesPerView, setSlidesPerView] = useState(5);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Responsive slidesPerView
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) setSlidesPerView(2);
+      else if (window.innerWidth < 1024) setSlidesPerView(4);
+      else setSlidesPerView(5);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Get visible images
+  const getVisibleImages = () => {
+    const visible = [];
+    for (let i = 0; i < slidesPerView; i++) {
+      visible.push(images[(currentIndex + i) % images.length]);
+    }
+    return visible;
+  };
+
+  const visibleImages = getVisibleImages();
+
+  // Dummy first two projects (replace with real data)
+  const firstTwoProjects = [
+    { img: img_1, title: "Project One" },
+    { img: img_2, title: "Project Two" },
   ];
 
   return (
-    <section id="projects" className="relative px-4 py-24 bg_custom_card">
-      <div className="container max-w-5xl mx-auto">
-        <h2 className="mb-12 text-3xl font-bold text-center md:text-4xl">
-          Featured <span className="text-primary">Projects</span>
-        </h2>
+    <section id="projects" className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Check out our latest works
+          </h2>
+          <p className="text-gray-600 text-sm md:text-lg max-w-2xl mx-auto">
+            Magnis modipsae que voloratati andigen daepeditem quiate re porem
+            aut labor.
+          </p>
+        </div>
 
-        <p className="max-w-2xl mx-auto mb-12 text-center text-gray-600 dark:text-gray-400">
-          Here are some recent projects
-        </p>
-
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="p-6 transition-all duration-300 rounded-lg shadow-md bg_custom_sm_card group hover:shadow-xl hover:-translate-y-1"
-            >
-              <div className="h-48 overflow-hidden rounded-md">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="object-cover w-full h-full transition-transform duration-200 group-hover:scale-110"
-                />
-              </div>
-
-              <div className="p-4">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 text-xs font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-800 dark:text-blue-100"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <h3 className="mb-1 text-xl font-semibold text-raw_custom">
+        {/* First Two Projects Grid */}
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          {firstTwoProjects.map((project, idx) => (
+            <div key={idx} className="rounded-lg shadow-lg overflow-hidden">
+              <img
+                src={project.img}
+                alt={project.title}
+                className="w-full h-auto transform hover:scale-105 transition-transform duration-500"
+              />
+              <div className="p-4 text-center">
+                <h5 className="text-xl font-semibold mb-1">
                   {project.title}
-                </h3>
-                <p className="mb-4 text-sm des-raw_custom">
-                  {project.description}
-                </p>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-500 duration-200 transition10-transform text-gray-00 hover:text-primary hover:scale-110"
-                      aria-label={`View demo of ${project.title}`}
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-
-                    {project.githubUrl && project.githubUrl !== "#" ? (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-700 transition-transform duration-200 dark:text-gray-300 hover:text-primary hover:scale-110"
-                        aria-label={`View GitHub repo of ${project.title}`}
-                      >
-                        <Github size={20} />
-                      </a>
-                    ) : (
-                      <span
-                        className="opacity-50 cursor-not-allowed"
-                        title="Private or unavailable"
-                        aria-label="GitHub repo not available"
-                      >
-                        <Github size={20} />
-                      </span>
-                    )}
-                  </div>
-                </div>
+                </h5>
+                <p className="text-gray-500">Identity</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <a
-            href="https://github.com/yanayem"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-semibold transition-colors text-primary hover:text-fifth"
+        {/* Carousel */}
+        <div className="relative w-full overflow-hidden">
+          <div className="flex transition-transform duration-500 gap-x-5">
+            {visibleImages.map((img, idx) => (
+              <img
+                key={idx}
+                src={img}
+                alt={`Project ${idx}`}
+                className={`h-auto rounded-lg shadow-lg gap-5 ${
+                  slidesPerView === 2
+                    ? "w-1/2"
+                    : slidesPerView === 4
+                    ? "w-1/4"
+                    : "w-1/5"
+                }`}
+              />
+            ))}
+          </div>
+
+          {/* Navigation Buttons */}
+          <button
+            onClick={() =>
+              setCurrentIndex(
+                (prev) => (prev - 1 + images.length) % images.length
+              )
+            }
+            className="absolute top-1/2 left-2 transform -translate-y-1/2 btn-primary text-white p-2 rounded-full hover:text-gray-200"
           >
-            Check my GitHub <ArrowRight size={16} />
-          </a>
+            &#10094;
+          </button>
+          <button
+            onClick={() =>
+              setCurrentIndex((prev) => (prev + 1) % images.length)
+            }
+            className="absolute top-1/2 right-2 transform -translate-y-1/2 btn-primary text-white p-2 rounded-full hover:text-gray-200"
+          >
+            &#10095;
+          </button>
+
+          {/* Pagination Dots */}
+          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            {Array.from({ length: images.length }).map((_, idx) => (
+              <button
+                key={idx}
+                className={`w-3 h-3 rounded-full ${
+                  idx === currentIndex ? "btn-primary" : "bg-gray-400"
+                }`}
+                onClick={() => setCurrentIndex(idx)}
+              ></button>
+            ))}
+          </div>
         </div>
       </div>
     </section>

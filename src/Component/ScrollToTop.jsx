@@ -21,7 +21,7 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className="btn scroll-bg"
+      className="btn bg-primary hover:text-white"
       style={{
         position: "fixed",
         bottom: "30px",
