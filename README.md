@@ -1,33 +1,38 @@
-# 👨‍💻 Yeasin Arafat Nayem Bhuiyan's Portfolio
+# 🖼️ REEN – React Portfolio Template
 
-Welcome to my personal portfolio! I'm Yeasin Arafat Nayem Bhuiyan, a passionate Frontend Developer specializing in creating modern, responsive, and visually appealing web applications using React.js, Tailwind CSS, and Vite.
+REEN is a modern and responsive **portfolio web template** built with **React.js, Vite, and Tailwind CSS**.  
+It is designed to showcase projects, skills, and personal branding with a clean and elegant UI.
 
-🔗 **Live Demo:** [Portfolio || Nayem](https://portfolio-react-tailwind-navy.vercel.app/)
+🔗 **Live Demo:** [REEN](https://reen-project-react-js.vercel.app/)
+
+---
+
+## ✨ Features
+- 📱 Fully responsive design
+- 🎨 Styled with **Tailwind CSS**
+- ⚡ Lightning-fast build with **Vite**
+- 🖼️ Beautiful icons powered by **Lucide React**
+- ☁️ Easy deployment with **Netlify**
 
 ---
 
 ## 🛠️ Technologies Used
-
-- **Frontend:** React.js, Vite, Tailwind CSS
-- **Icons:** Lucide React
-- **Deployment:** Netlify
-- **Version Control:** Git & GitHub
-
----
-
-## 📱 Connect with Me
-
-Stay connected through my social profiles:
-
-
-- **Email:** [arafatnayem01@gmail.com](mailto:arafatnayem01@gmail.com)
-- [LinkedIn](https://www.linkedin.com/in/yeasin-arafat-nayem-bhuiyan/)
-- [Twitter](#)
-- [Instagram](https://www.instagram.com/itsblackbang/)
-- [GitHub](https://github.com/yanayem)
+- **Frontend:** React.js, Vite, Tailwind CSS  
+- **Icons:** Lucide React  
+- **Deployment:** Netlify  
+- **Version Control:** Git & GitHub  
 
 ---
 
-## 📝 License
+## 📸 Preview
+![Project Preview](./preview.png)  
+*(Replace this with a screenshot of your project)*
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/yanayem/reen-project-react-js.git
+cd reen-project-react-js
